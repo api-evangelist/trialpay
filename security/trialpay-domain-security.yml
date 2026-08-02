@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: probed
+source: dig + HTTPS HEAD against trialpay.com (2026-07-21)
+note: >-
+  TrialPay was acquired by Visa in April 2015 and folded into the Visa Commerce
+  Network. The trialpay.com domain is still registered (AWS Route 53 nameservers,
+  Amazon SES / Google Workspace mail per SPF) but the public web/API servers no
+  longer respond over HTTPS, and the former developer docs host help.trialpay.com
+  no longer resolves. Absence of records below is real, recorded data.
+hosts:
+  - host: www.trialpay.com
+    https: false
+    reachable: false
+    note: DNS resolves (AWS) but HTTPS connection times out
+  - host: trialpay.com
+    https: false
+    reachable: false
+    resolves_to: [52.9.34.236, 54.177.189.139]
+    note: DNS resolves (AWS) but HTTPS connection times out
+  - host: help.trialpay.com
+    https: false
+    reachable: false
+    note: NXDOMAIN — former developer docs host no longer resolves
+domains:
+  - domain: trialpay.com
+    dnssec: false
+    caa: []
+    spf: true
+    spf_record: "v=spf1 a mx ip4:54.183.233.157 ip4:54.183.231.95 ip4:52.8.133.87 ip4:50.18.203.174 include:aspmx.googlemail.com include:amazonses.com ~all"
+    dmarc: false
+    dmarc_policy: null
+    nameservers: [awsdns-24.net, awsdns-35.org, awsdns-06.co.uk, awsdns-51.com]

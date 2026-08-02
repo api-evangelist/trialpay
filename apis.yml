@@ -1,7 +1,28 @@
 aid: trialpay
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/trialpay.png
 name: TrialPay
-description: TrialPay is a company surfaced as a portfolio company of battery-ventures and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  TrialPay was an alternative-payments and offer-based advertising company founded
+  in 2006 and based in Mountain View, California, backed by Battery Ventures among
+  others. Its platform let merchants and game developers offer users a product for
+  "free" in exchange for completing an advertiser-sponsored action (a purchase, trial,
+  or signup), with the advertiser paying the merchant — monetizing users who would
+  not otherwise pay. TrialPay shipped web, Android, and iOS SDKs plus offer-wall and
+  monetization APIs (e.g. GetBuyCoinsInfo / GetBuyDirectInfo) widely used in social
+  and mobile games. Visa acquired TrialPay in April 2015 and folded the technology into
+  the Visa Commerce Network; TrialPay no longer operates as a standalone company and
+  its public developer surface (help.trialpay.com, trialpay.com) is offline.
 url: https://raw.githubusercontent.com/api-evangelist/trialpay/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +30,34 @@ x-backed-by:
 - battery-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: visa
+x-acquired-date: '2015-04-01'
+x-live-api-surface: false
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Payments
+- Advertising
+- Monetization
+- Offer Wall
+- Gaming
+- Mobile
+- Acquired
 apis: []
+common:
+- type: DomainSecurity
+  url: security/trialpay-domain-security.yml
+  name: TrialPay Domain Security (probed)
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
